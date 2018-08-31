@@ -1,0 +1,239 @@
+/*Webkits*/
+	/*Scrollbar in Chrome einfärben*/
+	::-webkit-scrollbar 
+	{
+		width: 20px;
+	}
+	::-webkit-scrollbar-thumb 
+	{
+		background: red; 
+		border-radius: 10px;
+	}
+	/*Flexbox*/
+		/*Für vertikalen Umbruch*/
+		.vbox 
+		{
+			display: -webkit-box;
+			display:    -moz-box;
+			display:         box;
+		
+			-webkit-box-orient: vertical;
+			-moz-box-orient: vertical;
+			-ms-box-orient: vertical;
+			box-orient: vertical;
+		
+			display: -webkit-flex;
+			display:    -moz-flex;
+			display:     -ms-flex;
+			display:         flex;
+		
+			-webkit-flex-direction: column;
+			-moz-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+		}
+		/*Für horizontalen Umbruch*/
+		.hbox 
+		{
+			display: -webkit-box;
+			display:    -moz-box;
+			display:     -ms-box;
+			display:         box;
+		
+			-webkit-box-orient: horizontal;
+			-moz-box-orient: horizontal;
+			-ms-box-orient: horizontal;
+			box-orient: horizontal;
+		
+			display: -webkit-flex;
+			display:    -moz-flex;
+			display:     -ms-flex;
+			display:         flex;
+		
+			-webkit-flex-direction: row;
+			-moz-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+		}
+		/*umbruch zwischen den Vertikalenboxen*/
+		.space-between 
+		{
+			-webkit-box-pack: justify;
+			-moz-box-pack: justify;
+			-ms-box-pack: justify;
+			box-pack: justify;
+		
+			-webkit-justify-content: space-between;
+			-moz-justify-content: space-between;
+			-ms-justify-content: space-between;
+			justify-content: space-between;
+		}
+/*Grundeinstellungen*/
+body 
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+header, footer, article, aside 
+{
+	color: #ffffff;
+	padding: 0.25em;
+	margin: 0.25em;
+	border-radius: 0em;
+	background-color: #000000;
+	border-radius: 1em;
+}
+	/*Feineinstellungen*/
+	/*Bereiche*/
+	body 
+	{
+		background-color: #ffffff;
+	}
+	header 
+	{
+		text-align: center;      
+		padding-top: 0.25em;
+		height: 100px;
+		margin-top: 0.25em;
+		margin-bottom: 0;
+	}
+	.main 
+	{
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		-ms-box-flex: 1;
+		box-flex: 1;
+	
+		-webkit-flex: 1;
+		-moz-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+	
+		overflow: auto;
+		
+	}
+	footer
+	{
+		display: flex;
+		background-color: #000000;
+		height: 60px;
+	}
+	/*Unterbereiche*/
+	article 
+	{
+		-webkit-box-flex: 5;
+		-moz-box-flex: 5;
+		-ms-box-flex: 5;
+		box-flex: 5;
+	
+		-webkit-flex: 5;
+		-moz-flex: 5;
+		-ms-flex: 5;
+		flex: 5;
+	
+		overflow: auto;
+		overflow-x: hidden;
+	
+		margin-left: 0.25em;
+	}
+	aside 
+	{
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		-ms-box-flex: 1;
+		box-flex: 1;
+	
+		-webkit-flex: 1;
+		-moz-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+	
+		background-color: #ff0000;
+		padding-top: 1em;
+		//text-align:center;
+
+	}
+	footer div
+	{
+		width:100%;
+		margin-top:0.5em;
+		text-align:center;
+	}	
+	/*Elemente*/
+	aside ul
+	{
+		list-style-type: none;
+	} 
+	.asidelink
+	{
+		color:#ffffff;
+		text-decoration: none;
+	}
+	.asidelink:hover
+	{
+		color:#000000;
+	}
+	.textimage
+	{
+		width:10%;
+	}
+	.text a
+	{
+		color:#ffffff;
+	}
+	span
+	{
+		 color: #ff0000;
+	}	
+	.button-back
+	{
+		background-color: #000000;
+		border: none;
+	}
+	.button-back i
+	{
+	    width: 100%;
+	    color: #ffffff;
+	}
+@media screen and (max-width: 768px) 
+{	
+	body
+	{
+		min-width:320px;
+	}
+	.main 
+	{   
+		flex-direction: column;
+	}
+	aside
+	{
+		display: flex;
+		position: relative;
+		text-align: center;
+		align-items: center;
+		justify-content: center; 
+		background-color: #ff0000;
+		height: 60px;
+
+		margin-bottom: 0em;
+	}
+	aside ul
+	{
+		width: 100%; 
+	}
+	aside ul li
+	{
+		float:left;
+		width: 33%;
+	}
+	.asidelink
+	{
+		float:left;
+	}
+	article
+	{
+		margin-top: 0em;
+		margin-left: 0.25em;
+	}
+}
